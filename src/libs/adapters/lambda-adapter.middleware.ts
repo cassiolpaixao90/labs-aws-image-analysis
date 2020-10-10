@@ -2,7 +2,7 @@ import middy from '@middy/core';
 import eventNormalizer from '@middy/http-event-normalizer';
 import jsonBodyParser from '@middy/http-json-body-parser';
 
-export class MiddlewareBuilderAdapter {
+export class MiddlewareAdapter {
 	[x: string]: any;
 
 	constructor(handler: any) {
