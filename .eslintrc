@@ -6,5 +6,12 @@
 	"prettier": "eslint-config-standard-typescript-prettier/prettier",
 	"rules": {
 		"@typescript-eslint/no-var-requires": "off"
+	},
+	"globals": {
+		"root": true
+	},
+	"env": {
+		"es2020": true,
+		"node": true
 	}
 }
