@@ -1,4 +1,4 @@
-service: aws-serverless-sample
+service: labs-aws-image-analysis
 package:
   individually: true
 
@@ -14,32 +14,12 @@ provider:
 
 functions:
   create:
-    handler: src/user/create/index.handler
+    handler: src/recognition/image/index.handler
     events:
       - http:
-          method: post
-          path: user
-
-  delete:
-    handler: src/user/delete/index.handler
-    events:
-      - http:
-          method: delete
-          path: user
-
-  update:
-    handler: src/user/update/index.handler
-    events:
-      - http:
-          method: put
-          path: user
-
-  getAll:
-    handler: src/user/getAll/index.handler
-    events:
-      - http:
+          path: analyse/image
           method: get
-          path: user
+
 custom:
   webpack:
     webpackConfig: 'webpack.config.js'

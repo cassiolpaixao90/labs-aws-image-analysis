@@ -1,7 +1,10 @@
 {
-  "extends": ["standard-typescript-prettier"],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "prettier": "eslint-config-standard-typescript-prettier/prettier"
+	"extends": ["standard-typescript-prettier"],
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"prettier": "eslint-config-standard-typescript-prettier/prettier",
+	"rules": {
+		"@typescript-eslint/no-var-requires": "off"
+	}
 }
