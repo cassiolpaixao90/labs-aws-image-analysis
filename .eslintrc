@@ -1,0 +1,7 @@
+{
+  "extends": ["standard-typescript-prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "prettier": "eslint-config-standard-typescript-prettier/prettier"
+}

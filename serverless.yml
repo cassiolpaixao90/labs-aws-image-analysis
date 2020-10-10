@@ -1,0 +1,47 @@
+service: aws-serverless-sample
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128
+  stage: ${opt:stage, 'dev'}
+
+functions:
+  create:
+    handler: src/user/create/index.handler
+    events:
+      - http:
+          method: post
+          path: user
+
+  delete:
+    handler: src/user/delete/index.handler
+    events:
+      - http:
+          method: delete
+          path: user
+
+  update:
+    handler: src/user/update/index.handler
+    events:
+      - http:
+          method: put
+          path: user
+
+  getAll:
+    handler: src/user/getAll/index.handler
+    events:
+      - http:
+          method: get
+          path: user
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    packager: 'npm'
+    includeModules: true
