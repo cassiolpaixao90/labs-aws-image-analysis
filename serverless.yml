@@ -11,6 +11,15 @@ provider:
   runtime: nodejs12.x
   memorySize: 128
   stage: ${opt:stage, 'dev'}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - rekognition:DetectLabels
+      Resource: '*'
+    - Effect: 'Allow'
+      Action:
+        - translate:TranslateText
+      Resource: '*'
 
 functions:
   create:

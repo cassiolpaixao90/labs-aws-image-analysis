@@ -8,7 +8,7 @@ class ImageHandler implements Handler {
 
 	async main(imageDto: ImageDto): Promise<any> {
 		const response = await this.imageService.execute(imageDto.queryStringParameters);
-		return Ok(response);
+		return Ok({ labels: response });
 	}
 }
 
