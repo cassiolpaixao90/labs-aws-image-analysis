@@ -1,5 +1,5 @@
-import Joi, { ObjectSchema } from '@hapi/joi';
+import * as Yup from 'yup';
 
-export const ImageSchema: ObjectSchema = Joi.object({
-	imageUrl: Joi.string().uri().required()
+export const ImageSchema = Yup.object().shape({
+	imageUrl: Yup.string().url().required()
 });

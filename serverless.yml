@@ -22,7 +22,7 @@ provider:
       Resource: '*'
 
 functions:
-  create:
+  image:
     handler: src/recognition/image/index.handler
     events:
       - http:
@@ -32,5 +32,3 @@ functions:
 custom:
   webpack:
     webpackConfig: 'webpack.config.js'
-    packager: 'npm'
-    includeModules: true
