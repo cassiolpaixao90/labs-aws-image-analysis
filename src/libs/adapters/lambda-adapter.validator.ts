@@ -8,7 +8,7 @@ export const adapterValidator = ({ schema, key }) => ({
 			}
 
 			const value = handler.event[key];
-			await schema.validate(value, { abortEarly: false }).then();
+			await schema.validate(value, { abortEarly: false });
 
 			return next();
 		} catch (err) {
