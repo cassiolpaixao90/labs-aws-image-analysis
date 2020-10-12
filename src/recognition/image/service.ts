@@ -1,5 +1,5 @@
 import ImageDomain from './domain';
-import { Recognition, Translate, AdapterClient } from '../../libs/adapters';
+import { Recognition, Translate, Client } from '../../libs/adapters';
 
 export interface IImageService {
 	execute(payload): Promise<any>;
@@ -9,13 +9,13 @@ export class ImageService implements IImageService {
 	constructor(
 		private readonly recognition: Recognition,
 		private readonly translate: Translate,
-		private readonly adapterClient: AdapterClient
+		private readonly client: Client
 	) {}
 
 	async execute(payload): Promise<any> {
 		const image = new ImageDomain(payload);
 
-		const { data, error } = await this.adapterClient.get(image.imageUrl, {
+		const { data, error } = await this.client.get(image.imageUrl, {
 			responseType: 'arraybuffer'
 		});
 
