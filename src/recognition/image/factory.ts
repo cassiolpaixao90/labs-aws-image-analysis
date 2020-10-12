@@ -2,7 +2,7 @@ import ImageHandler from './handler';
 import { ImageService } from './service';
 import { ImageSchema } from './validation';
 import { AdapterClient, AdapterRekognition, AdapterTranslate } from '../../libs/adapters';
-import { MapperClientResponse } from '../../libs/helpers/lambda-mapper.client';
+import { MapperClientResponse } from '../../libs/mappers/lambda-mapper.client';
 
 export const makeImageHandler = (): any => {
 	const adapterRekognition = new AdapterRekognition();

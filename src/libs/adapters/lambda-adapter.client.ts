@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { MapperClient } from '../helpers/lambda-mapper.client';
+import { MapperClient } from '../mappers/lambda-mapper.client';
 
 export interface Client {
 	get(url: string, options?: any): Promise<any>;

@@ -1,5 +1,5 @@
 import { Handler } from '../../libs/adapters';
-import { Ok } from '../../libs/helpers/lambda-mapper.response';
+import { Ok } from '../../libs/mappers/lambda-mapper.response';
 import { ImageDto } from './dto';
 import { IImageService } from './service';
 

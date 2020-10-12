@@ -1,4 +1,4 @@
-import { lambdaMapperError } from '../helpers/lambda-mapper.error';
+import { lambdaMapperError } from '../mappers/lambda-mapper.error';
 
 export const adapterErrorHandler = () => ({
 	onError: (handler, next) => {
