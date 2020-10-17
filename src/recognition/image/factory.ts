@@ -4,7 +4,7 @@ import { ImageSchema } from './validation';
 import { AdapterClient, AdapterRekognition, AdapterTranslate } from '../../libs/adapters';
 import { MapperClientResponse } from '../../libs/mappers/lambda-mapper.client';
 
-export const makeImageHandler = (): any => {
+export const makeImageHandler = () => {
 	const adapterRekognition = new AdapterRekognition();
 	const adapterTranslate = new AdapterTranslate();
 	const adapterClient = new AdapterClient(new MapperClientResponse());
@@ -12,6 +12,6 @@ export const makeImageHandler = (): any => {
 	return new ImageHandler(imageService);
 };
 
-export const makeImageSchema = (): any => {
-	return { schema: ImageSchema, key: 'queryStringParameters' };
+export const makeImageSchema = () => {
+	return { schema: ImageSchema };
 };

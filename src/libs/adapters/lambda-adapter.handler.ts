@@ -3,7 +3,7 @@ export interface Handler {
 }
 
 export const adapterHandler = (handler: Handler) => {
-	return async (event: any) => {
+	return async (event) => {
 		return handler.main(event);
 	};
 };
