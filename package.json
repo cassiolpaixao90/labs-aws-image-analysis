@@ -1,5 +1,5 @@
 {
-	"name": "labs-aws-image-analysis",
+	"name": "labs-serverless-image-analysis",
 	"version": "1.0.0",
 	"description": "Sample app serverless-aws to image analysis",
 	"scripts": {
